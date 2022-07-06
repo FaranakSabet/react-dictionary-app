@@ -1,3 +1,9 @@
+body{
+    background-color: azure;
+}
+a{
+    color: rgba(28, 202, 202, 0.941);
+}
 .App-header{
     margin: 30px 0;
 }
