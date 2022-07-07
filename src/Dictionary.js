@@ -35,15 +35,20 @@ function load(){
 
   if(loaded){
     return (
-    <div className="Dictionary">
-      <section>
-        <form onSubmit={handleSubmit}>
-          <input type="search" onChange={handleKeywordChange} />
-        </form>
-      </section>
-      <Results results={results} />
-    </div>
-  );
+      <div className="Dictionary">
+        <section>
+          <h1>What do you want to look up?</h1>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              onChange={handleKeywordChange}
+              defaultValue={props.defaultKeyword}
+            />
+          </form>
+        </section>
+        <Results results={results} />
+      </div>
+    );
   } else {
     load();
     return "Loading";
